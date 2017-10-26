@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>my-resume</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"/>
+	<!-- bootstrap-css -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- 字体 -->
+	<link href="css/font-awesome.css" rel="stylesheet"> 
+	
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<!--数据-->
+	<script src="js/angular.min.js"></script>
+	<script src="js/index.js"></script>
+	<!-- main -->
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<div ng-repeat="x in resume">
+			<!-- 广告栏 -->
+			<div class="banner" id="home">
+				<!-- 导航标签 -->
+				<div id="toggle_m_nav">
+				  <div id="m_nav_menu" class="m_nav">
+					<div class="m_nav_ham" id="m_ham_1"></div>
+					<div class="m_nav_ham" id="m_ham_2"></div>
+					<div class="m_nav_ham" id="m_ham_3"></div>
+				  </div>
+				</div>
+				<!--导航符号-->
+				<div id="m_nav_container" class="m_nav">
+				  <ul id="m_nav_list" class="m_nav">
+					<li class="m_nav_item" id="m_nav_item_1"> <a href="#home">个人介绍</a> </li>
+					<li class="m_nav_item" id="moble_nav_item_2"> <a href="#about">关于我</a> </li>
+					<li class="m_nav_item" id="moble_nav_item_3"> <a href="#work">工作经验</a> </li>
+					<li class="m_nav_item" id="moble_nav_item_4"> <a href="#experience">项目经验</a> </li>
+					<li class="m_nav_item" id="moble_nav_item_5"> <a href="#contact">联系我</a> </li>
+				  </ul>
+				</div>
+				<!-- 个人介绍 -->
+				<div class="container">
+					<div class="agile-logo">
+						<h1><a href="index.html"><span>个人简历</span></a></h1>
+					</div>
+					<div class="w3l-banner-grids">
+						<div class="col-md-8 w3ls-banner-right">
+							<div class="banner-right-img">
+								<img ng-src={{x.photo}} alt="" />
+							</div>
+							<div class="banner-right-info">
+								<h2>我想要的都会以我的方式得到<br>&nbsp;&nbsp;&nbsp;&nbsp;努力的方式</h2>
+								<p>
+									1、活泼开朗,乐观上进,遇事不焦躁,做事认真仔细,思路清晰<br>
+									2、善于沟通,能快速融入一个新团队,具有良好的团队合作精神和协作能力<br>
+									3、有较强的责任心,做事不推卸责任,抗压能力强,能快速接收新的事物<br>
+									4、喜爱交流技术方面问题,爱加技术群,有轻微的代码整洁强迫症<br>
+								</p>
+							</div>
+							<div class="clearfix"> </div>
+							<div class="w3-button">
+								<div class="w3-button-info m_nav_item">
+									<a class="hvr-sweep-to-bottom" href="#contact">联系我</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 w3ls-banner-left">
+							<div class="w3ls-banner-left-info">
+								<h4>求职意向：</h4>
+								<p>{{x.job}}</p>
+							</div>
+							<div class="w3ls-banner-left-info">
+								<h4>名字：</h4>
+								<p>{{x.name}}</p>
+							</div>
+							<div class="w3ls-banner-left-info">
+								<h4>性别：</h4>
+								<p>{{x.sex}}</p>
+							</div>
+							<div class="w3ls-banner-left-info">
+								<h4>学历：</h4>
+								<p>{{x.education}}</p>
+							</div>
+							<div class="w3ls-banner-left-info">
+								<h4>邮箱：</h4>
+								<p>{{x.mail}}</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!-- 关于我 -->
+			<div class="about" id="about">
+				<div class="container">
+					<div class="wthree-about-grids">
+						<div class="col-md-6 wthree-about-left">
+							<h3>关于我</h3>
+							<h4>一年web前端开发经验，</h4>
+							<p>负责PC端管理系统（“任务管理”，“客户管理”）以及移动端微信客户个人主页开发，PC端开发使用angular1框架，后更新上升为angualr2.0,对vue有一定了解，移动端h5页面开发,有部分网页编写中涉及到微信小程序,对其有初步编写能力,为人乐观开朗，求知欲强，对待工作一丝不苟</p>
+						</div >
+						<div class="col-md-6 wthree-about-right">
+							<h3>个人技能</h3>
+							<div class="skills-bar">
+								<section class='bar'>
+								  <section class='wrap'>
+									<div class='wrap_right'>
+									  <div class='bar_group'>
+										<div class='bar_group__bar thin' label='HTML/CSS' show_values='true' tooltip='true' value='600'></div>
+										<div class='bar_group__bar thin' label='JAVASCRIPT' show_values='true' tooltip='true' value='550'></div>
+										<div class='bar_group__bar thin' label='ANGULAR.JS/VUE.JS' show_values='true' tooltip='true' value='550'></div>
+										<div class='bar_group__bar thin' label='HTML5/CSS3' show_values='true' tooltip='true' value='550'></div>
+										<div class='bar_group__bar thin' label='移动端' show_values='true' tooltip='true' value='500'></div>
+									  </div>
+									</div>
+									<div class='clear'></div>
+								  </section>
+								</section>
+							</div>
+						</div >
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!--工作经验-->
+			<div class="jarallax statistics" id="work" ng-repeat="y in x.work" style="color:#fff;">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 col-lg-offset-1">
+							<h5>工作</h5>
+						</div>
+						<div class="col-lg-6">
+							<p>
+								<t>前端开发</t><br>
+								{{y.company}} <br>
+							</p>
+							<p>
+								<more>
+									{{y.experience}}
+								</more>
+							</p>
+						</div>
+						<div class="col-lg-3">
+							<p><sm>{{y.time}}</sm></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--项目经验-->
+			<div id="experience">
+				<div class="container desc" style="margin-top:20px;">
+					<div class="row">
+						<div>项目经验：</div>
+						<div ng-repeat="z in x.project">
+							<!--项目一-->
+							<div class="col-lg-6 col-lg-offset-3">
+								<p><img class="img-responsive" src="{{z.img}}" alt=""></p>
+							</div>
+							<div class="col-lg-3">
+								<p>
+									<span style="font-weight: bold;">项目名称： </span>
+									{{z.proName}}
+								</p>
+								<p>
+									<span style="font-weight: bold;">项目描述:</span>
+									{{z.proDescribe}}
+								</p>
+								<p>
+									<span style="font-weight: bold;">项目时间：</span>
+									{{z.proTime}}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--联系我-->
+			<div id="contact" style="background:#2F2F2F;padding:20px;color:#fff;">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 col-lg-offset-1">
+							<h5>联系我</h5>
+						</div>
+						<div class="col-lg-6">
+							<p><t>邮箱</t>:
+								{{x.mail}}<br>
+							</p>
+							<p><t>地址</t>:
+								{{x.adress}} <br>
+							</p>
+							<p><t>联系电话</t>:
+								{{x.phone}} <br>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!--个人技能-引入bars.js库存在和angular.js起到排斥，故用此方法-->
+	<script>
+		$(document).ready(function() {
+			function bar_group(){group_ident=1,$(".bar_group").each(function(){$(this).addClass("group_ident-"+group_ident),$(this).data("gid",group_ident),group_ident++})}function get_max(){$(".bar_group").each(function(){var t=[];$(this).children().each(function(){t.push($(this).attr("value"))}),max_arr["group_ident-"+$(this).data("gid")]=t,void 0!==$(this).attr("max")?$(this).data("bg_max",$(this).attr("max")):$(this).data("bg_max",Math.max.apply(null,t))})}function data_labels(){$(".bar_group__bar").each(function(){void 0!==$(this).attr("label")&&$('<p class="b_label">'+$(this).attr("label")+"</p>").insertBefore($(this))})}function show_values(){$(".bar_group__bar").each(function(){"true"==$(this).attr("show_values")&&($(this).css("margin-bottom","40px"),void 0!==$(this).attr("unit")?($(this).append('<p class="bar_label_min">0 '+$(this).attr("unit")+"</p>"),$(this).append('<p class="bar_label_max">'+$(this).parent().data("bg_max")+" "+$(this).attr("unit")+"</p>")):($(this).append('<p class="bar_label_min">0</p>'),$(this).append('<p class="bar_label_max">'+$(this).parent().data("bg_max")+"</p>")))})}function show_tooltips(){$(".bar_group__bar").each(function(){"true"==$(this).attr("tooltip")&&($(this).css("margin-bottom","40px"),$(this).append('<div class="b_tooltip"><span>'+$(this).attr("value")+'</span><div class="b_tooltip--tri"></div></div>'))})}function in_view(t){var a=$(t),i=$(window),s=i.scrollTop(),r=s+i.height(),n=a.offset().top,o=n+a.height();r>o-45&&a.css("width",a.attr("value")/a.parent().data("bg_max")*100+"%")}function bars(){bar_group(),get_max(),data_labels(),show_tooltips(),show_values()}max_arr={},$(".bar_group__bar").each(function(){in_view($(this))}),$(window).scroll(function(){$(".bar_group__bar").each(function(){in_view($(this))})}),bars();
+		});
+	</script>
+</body>	
+</html>
